@@ -30,15 +30,34 @@
 
 /* base rules: html elements (+ state rules) */
 body {
+  min-width: 60rem;
   margin: 0 auto;
   background-color: var(--almost-white);
+  font-family: var(--main-font-family);
+  color: var(--almost-black);
 }
 
 nav ul {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-color: var(--light-light-gray);
   font-size: 2rem;
 }
 
 nav ul li {
+  flex: 1 1 auto;
+  display: inline-block;
+  border: 1px solid magenta;
   list-style: none;
+}
+
+nav ul li a {
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
 }

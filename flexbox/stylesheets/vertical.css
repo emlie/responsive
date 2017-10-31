@@ -1,0 +1,67 @@
+/* variables to dry the code, making maintenance easier */
+
+:root {
+  /* fonts, don't want serifs on the web */
+  --main-font-family: 'Open Sans', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+  --code-font-family: 'Fira Mono', sans-serif;
+
+  /* colors */
+  --blue: #90C3D4;
+  --pink: #ffb3b3;
+  --green: #CDDBD3;
+  --almost-white: #f7f7f7;
+  --light-light-gray: #E8E8E8;
+  --light-gray: #ccc;
+  --almost-black: #282828;
+  --black: #000;
+}
+
+* { /* select all elements */
+    box-sizing: border-box; /* padding and border are included in the total width and height of the elements - for the grid */
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%; /* 1 rem = 10 px */
+}
+
+
+
+
+
+/* smacss-organized */
+
+/* base rules: html elements (+ state rules) */
+body {
+  min-width: 60rem;
+  margin: 0 auto;
+  background-color: var(--almost-white);
+  font-family: var(--main-font-family);
+  color: var(--almost-black);
+}
+
+nav {
+  min-width: 20rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--light-light-gray);
+  font-size: 2rem;
+}
+
+nav ul li {
+  flex: 1 0 auto;
+  display: inline-block;
+  border: 1px solid magenta;
+  list-style: none;
+}
+
+nav ul li a {
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+}
