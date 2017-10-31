@@ -1,5 +1,11 @@
 /* variables to dry the code, making maintenance easier */
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
 :root {
   /* fonts, don't want serifs on the web */
   --main-font-family: 'Open Sans', sans-serif;
@@ -17,6 +23,7 @@
   --black: #000;
 }
 
+
 * { /* select all elements */
     box-sizing: border-box; /* padding and border are included in the total width and height of the elements - for the grid */
     margin: 0;
@@ -26,7 +33,9 @@
 
 
 
-
+p {
+  font-size: 20px;
+}
 
 /* smacss-organized */
 
@@ -50,6 +59,8 @@ nav ul {
   justify-content: flex-start;
   background-color: var(--light-light-gray);
   font-size: 2rem;
+  width: 100px;
+  height: auto;
 }
 
 nav ul li {
@@ -64,4 +75,28 @@ nav ul li a {
   font-size: inherit;
   text-decoration: none;
   color: inherit;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  height: inherit;
+}
+
+.body{
+  display: flex;
+  background-color: rgb(150,150,255);
+  /*flex-grow:(noe); dette skal gjøre så den vokser til hele siden slik at om skjermen blir større så blir også innholdet det, men navbaren er fortsatt like stor*/
+  height: inherit;
+}
+
+@media all and (min-width: 800px) {
+  .body {flex-grow: 3 0px;}
+  .navbar {order: 1;}
+  .body{ order: 2;}
 }
