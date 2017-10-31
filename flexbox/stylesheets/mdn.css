@@ -1,0 +1,89 @@
+:root {
+  /* fonts */
+  --main-font-family: 'Open Sans', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+  --code-font-family: 'Fira Mono', sans-serif;
+
+  /* colors */
+  --blue: #90C3D4;
+  --pink: #ffb3b3;
+  --green: #CDDBD3;
+  --almost-white: #f7f7f7;
+  --light-light-gray: #E8E8E8;
+  --light-gray: #ccc;
+  --almost-black: #282828;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1 rem = 10 px */
+}
+
+body {
+  background-color: var(--almost-white);
+  font-family: var(--main-font-family);
+  font-size: 2rem;
+}
+
+#main {
+  min-height: 80rem;
+  display: flex;
+  flex-flow: row;
+  font-size: inherit;
+}
+
+#main > article {
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid #cccc33;
+  background: #dddd88;
+  flex: 3 1 60%;
+  order: 2;
+}
+
+#main > nav {
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid #8888bb;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 1;
+}
+
+#main > aside {
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid #8888bb;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 3;
+}
+
+header, footer {
+  display: block;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  min-height: 10rem;
+  border: 1px solid #eebb55;
+  background: #ffeebb;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  #main, #page {
+    flex-direction: column;
+  }
+
+  #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+    order: 0;
+  }
+
+  #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}
