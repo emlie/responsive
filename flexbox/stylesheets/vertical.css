@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: 0;
+  font-size: 62.5%;
 }
 
 :root {
@@ -57,7 +58,6 @@ nav ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: var(--light-light-gray);
   font-size: 2rem;
   width: 100px;
   height: auto;
@@ -85,18 +85,26 @@ nav ul li a {
 .navbar{
   display: flex;
   justify-content: center;
-  height: inherit;
+  height: auto;
+  background-color: var(--light-gray);
 }
 
 .body{
   display: flex;
   background-color: rgb(150,150,255);
   /*flex-grow:(noe); dette skal gjøre så den vokser til hele siden slik at om skjermen blir større så blir også innholdet det, men navbaren er fortsatt like stor*/
-  height: inherit;
+  height: auto;
 }
 
 @media all and (min-width: 800px) {
   .body {flex-grow: 3 0px;}
   .navbar {order: 1;}
   .body{ order: 2;}
+}
+
+#main {
+  min-height: 80rem;
+  display: flex;
+  flex-flow: row;
+  font-size: inherit;
 }
