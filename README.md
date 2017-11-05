@@ -2,7 +2,7 @@
 Playing with flexbox and css grid
 
 ## tasks
-* fix flexbox horizontal
+* fix flexbox horizontal [x]
 * fix flexbox vertical [started]
 * add css grid folder
 * add mdn example [x]
