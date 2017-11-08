@@ -86,7 +86,7 @@ h2 {
 
 
 
-.sticky-nav {
+.sticky-nav { /* parent for flex items */
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -101,7 +101,7 @@ h2 {
   color: var(--dark-gray);
 }
 
-.sticky-nav >
+.sticky-nav > /* children of flex parent */
 li:nth-child(3) {
   flex: 2 1 auto;
 }
